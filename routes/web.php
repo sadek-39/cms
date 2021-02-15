@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SlideController;
+use App\Http\Controllers\HeaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -144,9 +145,9 @@ Route::get('/admin',function(){
 Route::get('/admindashboard',[AdminController::class,'admindashboard'])->name('admin-dashboard');
 
 //route admin header form
-Route::get('/adminheaderform',function(){
-    return view('admin/admin-header');
-})->name('admin-header');
+// Route::get('/adminheaderform',function(){
+//     return view('admin/admin-header');
+// })->name('admin-header');
 
 //route admin footer form
 
@@ -199,3 +200,22 @@ Route::get('/addslideform',function(){
 })->name('addslide');
 //
 Route::post('/createslide',[SlideController::class,'create'])->name('createslide');
+
+
+Route::get('/slideinfo/{id}',[SlideController::class,'singleslideinfo'])->name('slideinfo');
+
+Route::post('/slideupdate/{id}',[SlideController::class,'slideupdate'])->name('slideupdate');
+
+
+//header Part
+Route::get('/addheader',[HeaderController::class,'addform'])->name('addheaderform');
+
+Route::post('/createheader',[HeaderController::class,'create'])->name('createheader');
+
+Route::post('/updateheader/{id}',[HeaderController::class,'update'])->name('editheader');
+
+Route::get('/adminheader',[HeaderController::class,'showall'])->name('allheadersinfo');
+
+Route::get('/editheader/{id}',[HeaderController::class,'showone'])->name('singleheaderinfo');
+
+//footer part

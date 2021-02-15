@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
-
     <head>
       {{-- @include('layouts/_head') --}}
      
@@ -133,7 +132,8 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
-            <tbody>              
+            <tbody>    
+              
               @foreach ($data as $value)
               <tr>
                 <th scope="row">{{$value->sid}}</th>

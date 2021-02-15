@@ -1,10 +1,5 @@
 
-<html lang="en" dir="ltr">
-    <head>
-        <?php
-        // var_dump($data);
-        // exit();
-        ?>
+<html lang="en" dir="ltr"><head>
         
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
 
@@ -84,37 +79,23 @@
                     <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
 
                         <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                            <h2 class="mb-0">Slide Info</h2>
-                            <a href="{{route('addslide')}}" class="btn btn-primary"><h4>Add Slide</h4></a>
+                            <h2 class="mb-0">Edit Slider</h2>
 
-                            <form  action="" method="POST" enctype="multipart/form-data">
+                            <form id="sliderinsertform" action="{{route('updateslider',$data->sid)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <table id="table" class="table table-striped">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">SLide ID</th>
-                                        <th scope="col">Slide Title </th>
-                                        <th scope="col">Slide Image</th>
-                                        <th scope="col">Slide Text</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>              
-                                      @foreach ($data as $value)
-                                      <tr>
-                                        <th scope="row">{{$value->sdid}}</th>
-                                        <td>{{$value->slide_title}} </td>
-                                        <td>{{$value->image}}</td>
-                                        <td>{{$value->slide_text}}</td>
-                                        <td>
-                                            <a href="{{route('slideinfo',$value->sdid)}}" class="btn btn-secondary">Edit</a>
-                                        </td>
-                                      </tr>
-                                      @endforeach
-                            
-                                      
-                                      </tbody>
-                                  </table>
-                               
+                                  <div class="form-group">
+                                    <label for="Title">Slider ID</label>
+                                    <input type="text" name="sid" class="form-control" id="slidertitle" value="<?php echo($data->sid);?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="Title">Slider Title</label>
+                                    <input type="text" name="slider_title" class="form-control" id="slidertitle" value="<?php echo($data->slider_title);?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="Slider Page">Slider Page</label>
+                                    <input type="text" name="slider_page" class="form-control" id="slidertitle" value="<?php echo($data->slider_page);?>">
+                                  </div> 
+                                  <button  class="btn btn-primary">Submit</button>
                                 </form>
 
                             
@@ -194,7 +175,7 @@
            </a>
        </li>
        <li class="sidebar-menu-item">
-        <a class="sidebar-menu-button" href="{{route('allheadersinfo')}}">
+        <a class="sidebar-menu-button" href="{{route('admin-header')}}">
            <i class="fas fa-heading"></i>
             <span class="">Header</span>
         </a>

@@ -1,5 +1,6 @@
 
-<html lang="en" dir="ltr"><head>
+<html lang="en" dir="ltr">
+    <head>
         
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
 
@@ -79,22 +80,31 @@
                     <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
 
                         <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                            <h2 class="mb-0">Edit Slider</h2>
+                            <h2 class="mb-0">Edit Slide</h2>
 
-                            <form id="sliderinsertform" action="{{route('updateslider',$data->id)}}" method="POST" enctype="multipart/form-data">
+                            <form id="sliderinsertform" action="{{route('slideupdate',$data->sdid)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                
+                                    
+                                
                                   <div class="form-group">
-                                    <label for="Title">Slider ID</label>
-                                    <input type="text" name="sid" class="form-control" id="slidertitle" value="<?php echo($data->sid);?>">
+                                    <label for="Title">Slide ID</label>
+                                    <input type="text" name="sdid" class="form-control" id="slideid" value="<?php echo($data->sdid) ?>">
                                   </div>
                                   <div class="form-group">
-                                    <label for="Title">Slider Title</label>
-                                    <input type="text" name="slider_title" class="form-control" id="slidertitle" value="<?php echo($data->slider_title);?>">
+                                    <label for="Title">Slide Title</label>
+                                    <input type="text" name="slide_title" class="form-control" id="slidetitle" value="<?php echo($data->slide_title) ?>">
                                   </div>
                                   <div class="form-group">
-                                    <label for="Slider Page">Slider Page</label>
-                                    <input type="text" name="slider_page" class="form-control" id="slidertitle" value="<?php echo($data->slider_page);?>">
+                                    <label for="Slider Page">Slide Text</label>
+                                    <input type="text" name="slide_text" class="form-control" id="slidertitle" value="<?php echo($data->slide_text);?>">
                                   </div> 
+                                  <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Image file</label>
+                                        <input type="file" name="slide_image"class="form-control-file" id="exampleFormControlFile1">
+                                      </div>
+                                </div>
                                   <button  class="btn btn-primary">Submit</button>
                                 </form>
 
@@ -175,7 +185,7 @@
            </a>
        </li>
        <li class="sidebar-menu-item">
-        <a class="sidebar-menu-button" href="{{route('admin-header')}}">
+        <a class="sidebar-menu-button" href="{{route('allheadersinfo')}}">
            <i class="fas fa-heading"></i>
             <span class="">Header</span>
         </a>

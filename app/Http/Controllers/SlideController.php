@@ -134,4 +134,31 @@ class SlideController extends Controller
         return view('admin.admin-manageslide',['data'=>$jsonSliderData]);
 
     }
+    public function singleslideinfo($id)
+    {
+        $url=env('PDLCAPIHOST').'/slide/singleslideshow/'.$id;
+        $slide=new ApiController;
+        $slidesingledata=$slide->getCurlApiRequest($url);
+
+        //var_dump($slidesingledata);
+        $jsonslidesingledata=json_decode($slidesingledata);
+        //var_dump($jsonslidesingledata);
+        return view('admin.admin-slideupdate',['data'=>$jsonslidesingledata]);
+    }
+    public function slideupdate(Request $request, $id)
+    {
+        $url=env('PDLCAPIHOST').'/slide/slideupdate/'.$id;
+        $data=[
+            'sdid'=>$request->sdid,
+            'slide_title'=>$request->slide_title,
+            'slide_text'=>$request->slide_text,
+            'image'=>$request->slide_image
+        ];
+
+        $slideupdate=new ApiController;
+        $slideupdatedata=$slideupdate->updatecurlrequest($data,$url);
+        $jsonslideupdatedata=json_decode($slideupdatedata);
+
+        return redirect('/admindashboard');
+    }
 }

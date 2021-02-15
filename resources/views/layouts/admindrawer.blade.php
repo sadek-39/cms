@@ -22,7 +22,7 @@ id="default-drawer">
            </li>
            <li class="sidebar-menu-item">
             <a class="sidebar-menu-button"
-               href="{{route('admin-header')}}">
+               href="{{route('allheadersinfo')}}">
                <i class="fas fa-heading"></i>
                 <span class="">Header</span>
             </a>

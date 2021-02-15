@@ -115,7 +115,7 @@ class SliderController extends Controller
         $url=env('PDLCAPIHOST').'/slider/showallslider';
         $sliderdata=new ApiController;
         $slidergetdata=$sliderdata->getCurlApiRequest($url);
-        // var_dump($slidergetdata);
+        //var_dump($slidergetdata);
         // echo"<br>";
         if($sliderjsondecode=json_decode($slidergetdata)){
         //$sliderexplode=explode(" ",$slidergetdata);
@@ -136,6 +136,6 @@ class SliderController extends Controller
         $jsondata=json_decode($singlesliderdata);
         //var_dump($jsondata);
 
-        return view('admin.test',['data'=>$jsondata]);
+        return view('admin.updateslider',['data'=>$jsondata]);
     }
 }
