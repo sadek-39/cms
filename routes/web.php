@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\FooterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -151,9 +152,9 @@ Route::get('/admindashboard',[AdminController::class,'admindashboard'])->name('a
 
 //route admin footer form
 
-Route::get('/adminfooterform',function(){
-    return view('admin/admin-footer');
-})->name('admin-footer');
+// Route::get('/adminfooterform',function(){
+//     return view('admin/admin-footer');
+// })->name('admin-footer');
 
 //route admin slider form
 // Route::get('/adminsliderform',function(){
@@ -219,3 +220,13 @@ Route::get('/adminheader',[HeaderController::class,'showall'])->name('allheaders
 Route::get('/editheader/{id}',[HeaderController::class,'showone'])->name('singleheaderinfo');
 
 //footer part
+
+Route::get('/adminfooter',[FooterController::class,'showall'])->name('admin-footer');
+
+Route::get('/editfooter/{id}',[FooterController::class,'showone'])->name('singlefooterinfo');
+
+Route::post('/footerupdate/{id}',[FooterController::class,'update'])->name('footer-update');
+
+Route::get('/test',function(){
+    return view('layouts/navbar_index');
+});

@@ -15,16 +15,17 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        // $url=env('PDLCAPIHOST').'/admin/settingsview';
-        // $data=$this->getCurlApiRequest($url);
-        // // $dataconvert=(string)$data;
+        $url=env('PDLCAPIHOST').'/admin/settingsview';
+        $admin=new ApiController;
+        $data=$admin->getCurlApiRequest($url);
+        // $dataconvert=(string)$data;
         
-        // //var_dump($data);
-        // //$datatoarray=(array)$data;
+        //var_dump($data);
+        //$datatoarray=(array)$data;
 
-        // //var_dump($datatoarray);
-        // $datade=json_decode($data);
-        // View::share('data',$datade);//share data to all views
+        //var_dump($datatoarray);
+        $datade=json_decode($data);
+        View::share('settingsdata',$datade);//share data to all views
 
 
     }

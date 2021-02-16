@@ -3,7 +3,9 @@
 namespace App\Http\View\Composers;
 
 use App\Http\Controllers\AdminController;
-use Illuminate\Support\Facades\View;
+use App\Http\Controllers\ApiController;
+use Illuminate\View\View;
+
 
 class ViewComposer
 {
@@ -20,10 +22,24 @@ class ViewComposer
      * @param  \App\Repositories\UserRepository  $users
      * @return void
      */
-    public function __construct(array $data)
+    public function __construct()
     {
         // Dependencies automatically resolved by service container...
-        $this->data = $data;
+        $url=env('PDLCAPIHOST').'/header/infoheaders';
+        $header=new ApiController;
+        $dataheader=$header->getCurlApiRequest($url);
+        // $dataconvert=(string)$data;
+        
+        //var_dump($data);
+       // $datatoarray=(array)$data;
+
+        //var_dump($datatoarray);
+        $this->data=json_decode($dataheader);
+        //$this->data=$dataheader;
+        // var_dump($datade);
+        //View::share('headersdata',$datade);//share data to all views
+
+        
     }
 
     /**
@@ -36,13 +52,8 @@ class ViewComposer
     // {
     //     $view->with('da', $this->data);
     // }
-    public function compose()
-{        
-    $data = $this->data;
-
-    View::composer('index', function( $view ) use ($data) 
+    public function compose(View $view)
     {
-        //here you can use your $data to compose the view
-    } );
-}
+        $view->with('headersdata', $this->data);
+    }
 }

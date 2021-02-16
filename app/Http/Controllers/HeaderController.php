@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 class HeaderController extends Controller
 {
+
 
     
     /**
@@ -13,6 +15,23 @@ class HeaderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function __construct()
+    // {
+    //     $url=env('PDLCAPIHOST').'/header/infoheaders';
+    //     $header=new ApiController;
+    //     $data=$header->getCurlApiRequest($url);
+    //     // $dataconvert=(string)$data;
+        
+    //     //var_dump($data);
+    //    // $datatoarray=(array)$data;
+
+    //     //var_dump($datatoarray);
+    //     $datade=json_decode($data);
+    //     // var_dump($datade);
+    //     View::share('headersdata',$datade);//share data to all views
+
+
+    // }
     public function index()
     {
         //

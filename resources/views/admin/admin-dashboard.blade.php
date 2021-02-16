@@ -9,7 +9,7 @@
     <div class="row mb-lg-8pt">
         <div class="col-md-6 card-group-row__col">
 
-            <div class="card card-group-row__card">
+            {{-- <div class="card card-group-row__card">
                 <div class="card-header p-0 nav border-0">
                     <div class="row no-gutters flex"
                          role="tablist">
@@ -38,15 +38,15 @@
                                 data-chart-suffix="k"></canvas>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
         <div class="col-md-3 card-group-row__col">
 
-            <div class="card card-group-row__card card-body"
+            {{-- <div class="card card-group-row__card card-body"
                  style="position: relative; padding-bottom: calc(80px - 1.25rem); overflow: hidden; z-index: 0;">
 
-                <div class="d-flex">
+                 <div class="d-flex">
                     <div class="flex mr-3">
                         <div class="h2 mb-0">$1,450</div>
                         <div class="d-flex flex-column">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <a href="#"><i class="material-icons text-50">more_horiz</i></a>
-                </div>
+                </div> 
 
                 <div class="chart"
                      style="height: 100px; position: absolute; left: 0; right: 0; bottom: 0;">
@@ -63,13 +63,13 @@
                             id="productsChart"
                             data-chart-hide-axes="true"
                             data-chart-line-border-color="primary"></canvas>
-                </div>
-            </div>
+                </div> 
+            </div> --}}
 
         </div>
         <div class="col-md-3 card-group-row__col">
 
-            <div class="card card-group-row__card">
+            {{-- <div class="card card-group-row__card">
                 <div class="card-body">
                     <div class="d-flex mb-16pt">
                         <div class="flex mr-3">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -108,7 +108,7 @@
     <div class="row card-group-row mb-lg-8pt">
         <div class="col-md-6 card-group-row__col">
 
-            <div class="card card-group-row__card">
+            {{-- <div class="card card-group-row__card">
                 <div class="card-header p-0 nav">
                     <div class="row no-gutters flex"
                          role="tablist">
@@ -154,12 +154,12 @@
                         </canvas>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
         <div class="col-md-6 card-group-row__col">
 
-            <div class="card card-group-row__card">
+            {{-- <div class="card card-group-row__card">
                 <div class="card-header p-0 nav">
                     <div class="row no-gutters flex"
                          role="tablist">
@@ -276,7 +276,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -284,11 +284,11 @@
     <div class="row">
         <div class="col-lg-8">
 
-            <div class="page-separator">
+            {{-- <div class="page-separator">
                 <div class="page-separator__text">Projects</div>
-            </div>
+            </div> --}}
 
-            <div class="card dashboard-area-tabs mb-lg-0">
+            {{-- <div class="card dashboard-area-tabs mb-lg-0">
                 <div class="card-header p-0 nav">
                     <div class="row no-gutters"
                          role="tablist">
@@ -741,20 +741,21 @@
                     </ul>
 
                 </div>
+            </div> --}}
                 <!-- <div class="card-body bordet-top text-right">
 15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
 </div> -->
 
-            </div>
+            
 
         </div>
         <div class="col-lg-4">
 
-            <div class="page-separator">
+            {{-- <div class="page-separator">
                 <div class="page-separator__text">Tasks</div>
-            </div>
+            </div> --}}
 
-            <div class="card mb-lg-0">
+            {{-- <div class="card mb-lg-0">
                 <div class="card-header d-flex align-items-center">
                     <strong class="flex">Tasks</strong>
                     <div><a href="#">View all</a></div>
@@ -899,7 +900,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>

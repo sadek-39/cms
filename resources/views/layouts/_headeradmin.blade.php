@@ -11,7 +11,7 @@
     </button>
 
     <!-- Navbar Brand -->
-    <a href="index.html"
+    <a href="{{route('admin-dashboard')}}"
         class="navbar-brand mr-16pt">
         <img class="navbar-brand-icon mr-0 mr-lg-8pt"
             src="images/logo/api-logo.png"
@@ -33,7 +33,7 @@
 
     <div class="flex"></div>
 
-    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
+    {{-- <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
         style="white-space: nowrap;">
         <div class="nav-item dropdown d-none d-sm-flex">
             <a href="#"
@@ -51,10 +51,10 @@
                     href="">Spanish</a>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
-        <div class="nav-item dropdown d-none d-sm-flex">
+        {{-- <div class="nav-item dropdown d-none d-sm-flex">
             <a href="#"
                 class="nav-link d-flex align-items-center dropdown-toggle"
                 data-toggle="dropdown">
@@ -79,10 +79,10 @@
                 <a class="dropdown-item"
                     href="compact-login.html">Logout</a>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Notifications dropdown -->
-        <div class="nav-item ml-16pt dropdown dropdown-notifications">
+        {{-- <div class="nav-item ml-16pt dropdown dropdown-notifications">
             <button class="nav-link btn-flush dropdown-toggle"
                     type="button"
                     data-toggle="dropdown"
@@ -159,11 +159,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- // END Notifications dropdown -->
 
         <!-- Notifications dropdown -->
-        <div class="nav-item ml-16pt dropdown dropdown-notifications">
+        {{-- <div class="nav-item ml-16pt dropdown dropdown-notifications">
             <button class="nav-link btn-flush dropdown-toggle"
                     type="button"
                     data-toggle="dropdown"
@@ -220,11 +220,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- // END Notifications dropdown -->
     </div>
 
-    <div class="dropdown border-left-2 navbar-border">
+    {{-- <div class="dropdown border-left-2 navbar-border">
         <button class="navbar-toggler navbar-toggler-custom d-block"
                 type="button"
                 data-toggle="dropdown"
@@ -266,6 +266,6 @@
                 </small>
             </a>
         </div>
-    </div>
+    </div> --}}
 
 </div>

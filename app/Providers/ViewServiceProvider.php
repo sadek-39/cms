@@ -27,6 +27,10 @@ class ViewServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         // View::composer(['index','layouts._head'], ViewComposer::class);
+        View::composer(
+            ['layouts.navbar_index', 'myaccount'],
+            ViewComposer::class
+        );
 
         // Using closure based composers...
         // View::composer('dashboard', function ($view) {

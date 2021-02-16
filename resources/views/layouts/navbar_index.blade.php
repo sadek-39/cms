@@ -1,3 +1,4 @@
+
 <div class="mdk-header-layout js-mdk-header-layout">
     <div id="header"
          class="mdk-header mdk-header--bg-dark bg-dark js-mdk-header mb-0"
@@ -33,8 +34,11 @@
                                  class="img-fluid" /></span>
 
                     </span>
+                    @foreach ($headersdata as $item)
+                    <span class="d-none d-lg-block">{{$item->menu_name}}</span>    
+                    @endforeach
 
-                    <span class="d-none d-lg-block">PDLC</span>
+                    
                 </a>
 
                 <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">

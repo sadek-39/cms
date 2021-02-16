@@ -11,6 +11,12 @@
         #module a:not(.collapsed):after {
         content: '- Read Less';
         }
+        #ordermange{
+            transition: width 2s, height 2s, transform 2s;
+        }
+        #ordermange:hover{
+                transform: rotate(90deg);
+        }
 
         </style>
 
@@ -23,7 +29,7 @@
                        <div class="page-separator__text">Key Features</div>
                    </div>
                    <!--1 start-->
-                   <div class="row card-group-row">
+                   <div class="row card-group-row" id="ordermange">
         
                        <div class="col-sm-4 card-group-row__col">
         
@@ -32,7 +38,7 @@
                                 data-placement="right"
                                 data-trigger="click">
         
-                               <div class="card-body d-flex flex-column">
+                               <div class="card-body d-flex flex-column ">
                                    <div class="d-flex align-items-center">
                                        <div class="flex">
                                            <div class="d-flex align-items-center">
@@ -52,7 +58,7 @@
                                                    </div>
                                                </div>
                                                <div class="flex">
-                                                   <div class="card-title">Order Document Management</div>
+                                                   <div class="card-title" >Order Document Management</div>
                                                    <p class="flex text-50 lh-1 mb-0"><small>Order Document Management</small></p>
                                                </div>
                                            </div>

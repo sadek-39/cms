@@ -8,7 +8,7 @@ id="default-drawer">
        <ul class="nav flex-column flex-nowrap flex-shrink-0 sidebar-menu sm-item-bordered">
            <li class="sidebar-menu">
                <a class="sidebar-menu-button"
-                  href="">
+                  href="{{route('admin-dashboard')}}">
                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dashboard</i>
                    <span class="">Dashboard</span>
                </a>

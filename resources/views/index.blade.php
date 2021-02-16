@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
       dir="ltr">
-      
 
         <head>
         @include('layouts/_head')
@@ -9,10 +8,22 @@
         <style>
             .mdk-header__bg-front{
                 opacity:1;
+                animation: mymove 5s infinite;
             }
+             @keyframes mymove {
+            50% {border: 110px solid yellowgreen;border-bottom: 80px solid rgb(255, 255, 255);}
+              }
+              .mdk-header__bg-front {
+                  opacity:1;
+              }
+              .mdk-header__bg{
+                  opacity:1;
+              }
+            
             .t-shirt{
                 font-size: 3em;
             }
+         
         </style>
     </head>
     <body class="layout-app ">

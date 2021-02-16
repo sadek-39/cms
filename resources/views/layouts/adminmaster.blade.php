@@ -120,7 +120,7 @@
 
                         </div>
 
-                        <div class="row"
+                        {{-- <div class="row"
                              role="tablist">
                             <div class="col-auto d-flex flex-column">
                                 <h6 class="m-0">&dollar;12.3k</h6>
@@ -140,7 +140,7 @@
                                 <a href=""
                                    class="btn btn-accent">New Report</a>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
